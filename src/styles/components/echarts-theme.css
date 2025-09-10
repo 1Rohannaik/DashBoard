@@ -1,0 +1,160 @@
+.echarts-tooltip {
+  background: var(--panel, var(--bg)) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.15)) !important;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  color: var(--text) !important;
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+}
+.echarts-axis-label {
+  color: var(--text-muted) !important;
+  font-size: 11px !important;
+  font-family: inherit !important;
+}
+.echarts-axis-line {
+  stroke: var(--border) !important;
+  stroke-width: 1px !important;
+}
+.echarts-axis-tick {
+  stroke: var(--border) !important;
+  stroke-width: 1px !important;
+}
+.echarts-grid-line {
+  stroke: var(--border) !important;
+  stroke-width: 0.5px !important;
+  opacity: 0.3 !important;
+}
+.echarts-legend {
+  color: var(--text) !important;
+  font-size: 12px !important;
+  font-family: inherit !important;
+}
+.echarts-legend-item {
+  color: var(--text) !important;
+}
+.echarts-legend-symbol {
+  border-radius: 2px !important;
+}
+.echarts-line-series path {
+  stroke-width: 3px !important;
+  fill: none !important;
+}
+.echarts-bar-series rect {
+  stroke: none !important;
+}
+.echarts-pie-series path {
+  stroke: var(--bg) !important;
+  stroke-width: 2px !important;
+}
+.echarts-title {
+  color: var(--text) !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+}
+.echarts-subtitle {
+  color: var(--text-muted) !important;
+  font-family: inherit !important;
+  font-weight: 400 !important;
+}
+.echarts-loading {
+  color: var(--text-muted) !important;
+  background: var(--bg) !important;
+}
+.echarts-empty {
+  color: var(--text-muted) !important;
+  font-family: inherit !important;
+}
+.echarts-brush {
+  fill: var(--accent) !important;
+  fill-opacity: 0.2 !important;
+  stroke: var(--accent) !important;
+  stroke-width: 1px !important;
+}
+.echarts-selection-mark {
+  stroke: var(--accent) !important;
+  stroke-width: 2px !important;
+  fill: transparent !important;
+}
+.echarts-datazoom {
+  background: var(--bg-secondary, var(--bg)) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+}
+.echarts-datazoom-handle {
+  fill: var(--accent) !important;
+  stroke: var(--border) !important;
+  stroke-width: 1px !important;
+}
+.echarts-datazoom-slider {
+  fill: var(--bg) !important;
+  stroke: var(--border) !important;
+  stroke-width: 1px !important;
+}
+@media (max-width: 768px) {
+  .echarts-axis-label {
+    font-size: 10px !important;
+  }
+  .echarts-legend {
+    font-size: 10px !important;
+  }
+  .echarts-tooltip {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+}
+@media (max-width: 480px) {
+  .echarts-axis-label {
+    font-size: 9px !important;
+  }
+  .echarts-legend {
+    font-size: 9px !important;
+  }
+  .echarts-tooltip {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
+}
+[data-theme="dark"] .echarts-tooltip {
+  background: var(--bg) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+[data-theme="light"] .echarts-tooltip {
+  background: white !important;
+  border-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+.echarts-chart * {
+  transition: all 0.3s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .echarts-chart * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  .echarts-tooltip {
+    display: none !important;
+  }
+  .echarts-legend,
+  .echarts-axis-label,
+  .echarts-title {
+    color: black !important;
+  }
+  .echarts-axis-line,
+  .echarts-axis-tick,
+  .echarts-grid-line {
+    stroke: black !important;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,19 @@
+/* Light theme overrides */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --panel: #f8fafc;
+  --panel-alt: #f1f5f9;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --surface-border: #e2e8f0;
+  --border: #cbd5e1;
+  --accent: #3b82f6;
+  --green: #059669;
+  --danger: #dc2626;
+  --scrim: rgba(148, 163, 184, 0.4);
+}
+
+:root[data-theme="light"] .chart-main,
+:root[data-theme="light"] .chart-preview {
+  border-color: color-mix(in srgb, var(--surface-border), var(--bg) 30%);
+}

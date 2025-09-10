@@ -1,0 +1,52 @@
+{
+  "kpis": [
+    {
+      "title": "Total Sales",
+      "value": "$300k",
+      "note": "+12% vs last month"
+    },
+    {
+      "title": "New Users",
+      "value": "3.2k",
+      "note": "Active this month"
+    },
+    {
+      "title": "Orders",
+      "value": "820",
+      "note": "+5% vs last month"
+    },
+    {
+      "title": "Bounce Rate",
+      "value": "28%",
+      "note": "-2% vs last month"
+    }
+  ],
+  "monthlySales": [
+    { "month": "Jan", "sales": 30000 },
+    { "month": "Feb", "sales": 14000 },
+    { "month": "Mar", "sales": 16500 },
+    { "month": "Apr", "sales": 19000 },
+    { "month": "May", "sales": 21000 },
+    { "month": "Jun", "sales": 22000 },
+    { "month": "Jul", "sales": 25000 },
+    { "month": "Aug", "sales": 24500 },
+    { "month": "Sep", "sales": 27000 },
+    { "month": "Oct", "sales": 28000 },
+    { "month": "Nov", "sales": 31000 }
+  ],
+  "revenueByCategory": [
+    { "category": "Electronics", "revenue": 42000 },
+    { "category": "Beauty", "revenue": 18000 },
+    { "category": "Fashion", "revenue": 36000 },
+    { "category": "Home", "revenue": 12000 },
+    { "category": "Toys", "revenue": 16000 }
+  ],
+  "demographics": [
+    { "name": "18-24", "value": 38 },
+    { "name": "25-34", "value": 32 },
+    { "name": "35-44", "value": 24 },
+    { "name": "45-54", "value": 15 },
+    { "name": "55+", "value": 11 }
+  ],
+  "pieColors": ["#4f46e5", "#ef4444", "#f59e0b", "#14b8a6", "#22c55e"]
+}

@@ -1,0 +1,59 @@
+/* ======================== Rectangular Chart Card Styles ======================== */
+.chart-container, .chart-main-container, .chart-preview-container {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  width: 100%;
+  height: 280px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chart-main, .chart-preview, .chart-item {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px dashed var(--surface-border, var(--border));
+  border-radius: var(--radius, 12px);
+  position: relative;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: chartFadeIn 0.6s ease-out forwards;
+}
+
+.chart-preview { animation-delay: 0.15s; }
+.chart-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* ========== Hover ========== */
+.chart-main:hover, .chart-preview:hover, .chart-item:hover {
+  transform: scale(1.02);
+  border-color: var(--accent, #4f46e5);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+.chart-container:hover,
+.chart-main-container:hover,
+.chart-preview-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: var(--accent, #4f46e5);
+}
+@media (max-width: 900px) {
+  .chart-container, .chart-main-container, .chart-preview-container { height: 240px; max-width: 350px; }
+}
+@media (max-width: 768px) {
+  .chart-container, .chart-main-container, .chart-preview-container { height: 200px; max-width: 280px; }
+}
+@media (max-width: 480px) {
+  .chart-container, .chart-main-container, .chart-preview-container { height: 180px; max-width: 100%; }
+}
