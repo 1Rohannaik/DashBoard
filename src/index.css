@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import './styles/variables.css';
+@import './styles/base.css';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Layout */
+@import './styles/layout/app-layout.css';
+@import './styles/layout/dashboard.css';
+
+/* Components */
+@import './styles/components/panels.css';
+@import './styles/components/charts.css';
+@import './styles/components/forms.css';
+@import './styles/components/buttons.css';
+
+/* Utilities */
+@import './styles/utilities/loading.css';
+@import './styles/utilities/responsive.css';
+
+
+
+
+@import './styles/components/layout.css';
+@import './styles/components/chart-card.css';
+@import './styles/components/modal.css';
+@import './styles/components/states.css';
+@import './styles/components/echarts-theme.css';
