@@ -1,45 +1,63 @@
 .echarts-tooltip {
-  background: var(--panel, var(--bg)) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-sm, 8px) !important;
-  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.15)) !important;
+  background: #ffffff !important; 
+  border: 1px solid #e5e7eb !important; 
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
-  color: var(--text) !important;
-  font-size: 12px !important;
-  padding: 8px 12px !important;
+  color: #374151 !important; 
+  font-size: 13px !important;
+  padding: 10px 14px !important;
   pointer-events: none !important;
   z-index: 9999 !important;
 }
+
+
 .echarts-axis-label {
-  color: var(--text-muted) !important;
-  font-size: 11px !important;
+  color: #6b7280 !important; 
+  font-size: 12px !important;
   font-family: inherit !important;
+  transition: color 0.3s ease;
 }
-.echarts-axis-line {
-  stroke: var(--border) !important;
-  stroke-width: 1px !important;
+.echarts-axis-label:hover {
+  color: #4f46e5 !important;
 }
+
+
+.echarts-axis-line,
 .echarts-axis-tick {
-  stroke: var(--border) !important;
+  stroke: #d1d5db !important;
   stroke-width: 1px !important;
 }
+
+/* Grid Lines */
 .echarts-grid-line {
-  stroke: var(--border) !important;
+  stroke: #d1d5db !important; 
   stroke-width: 0.5px !important;
-  opacity: 0.3 !important;
+  opacity: 0.2 !important;
 }
+
+/* Legend */
 .echarts-legend {
-  color: var(--text) !important;
+  color: #374151 !important;
   font-size: 12px !important;
   font-family: inherit !important;
 }
 .echarts-legend-item {
-  color: var(--text) !important;
+  color: #374151 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.echarts-legend-item:hover {
+  background: #4f46e5;
+  color: #ffffff !important;
 }
 .echarts-legend-symbol {
-  border-radius: 2px !important;
+  border-radius: 50% !important;
 }
+
+/* Line, Bar, Pie series */
 .echarts-line-series path {
   stroke-width: 3px !important;
   fill: none !important;
@@ -48,53 +66,65 @@
   stroke: none !important;
 }
 .echarts-pie-series path {
-  stroke: var(--bg) !important;
+  stroke: #ffffff !important;
   stroke-width: 2px !important;
 }
+
+/* Titles */
 .echarts-title {
-  color: var(--text) !important;
+  color: #111827 !important; 
   font-family: inherit !important;
   font-weight: 600 !important;
 }
 .echarts-subtitle {
-  color: var(--text-muted) !important;
+  color: #6b7280 !important; 
   font-family: inherit !important;
   font-weight: 400 !important;
 }
-.echarts-loading {
-  color: var(--text-muted) !important;
-  background: var(--bg) !important;
-}
+
+/* Loading & Empty */
+.echarts-loading,
 .echarts-empty {
-  color: var(--text-muted) !important;
+  color: #9ca3af !important;
+  background: #f9fafb !important;
   font-family: inherit !important;
 }
+
+/* Brush & Selection */
 .echarts-brush {
-  fill: var(--accent) !important;
-  fill-opacity: 0.2 !important;
-  stroke: var(--accent) !important;
+  fill: #4f46e5 !important;
+  fill-opacity: 0.15 !important;
+  stroke: #4f46e5 !important;
   stroke-width: 1px !important;
 }
 .echarts-selection-mark {
-  stroke: var(--accent) !important;
+  stroke: #4f46e5 !important;
   stroke-width: 2px !important;
   fill: transparent !important;
 }
+
+/* DataZoom */
 .echarts-datazoom {
-  background: var(--bg-secondary, var(--bg)) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
+  background: #f3f4f6 !important; 
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
 }
 .echarts-datazoom-handle {
-  fill: var(--accent) !important;
-  stroke: var(--border) !important;
+  fill: #4f46e5 !important;
+  stroke: #d1d5db !important;
   stroke-width: 1px !important;
+  transition: all 0.3s ease;
+}
+.echarts-datazoom-handle:hover {
+  filter: drop-shadow(0 0 6px rgba(79, 70, 229, 0.4));
 }
 .echarts-datazoom-slider {
-  fill: var(--bg) !important;
-  stroke: var(--border) !important;
+  fill: #ffffff !important;
+  stroke: #d1d5db !important;
   stroke-width: 1px !important;
 }
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .echarts-axis-label {
     font-size: 10px !important;
@@ -119,25 +149,21 @@
     padding: 4px 8px !important;
   }
 }
-[data-theme="dark"] .echarts-tooltip {
-  background: var(--bg) !important;
-  border-color: var(--border) !important;
-  color: var(--text) !important;
-}
-[data-theme="light"] .echarts-tooltip {
-  background: white !important;
-  border-color: #e5e7eb !important;
-  color: #374151 !important;
-}
+
+/* Smooth transitions */
 .echarts-chart * {
   transition: all 0.3s ease !important;
 }
+
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .echarts-chart * {
     animation: none !important;
     transition: none !important;
   }
 }
+
+/* Print support */
 @media print {
   .echarts-tooltip {
     display: none !important;
@@ -153,6 +179,8 @@
     stroke: black !important;
   }
 }
+
+/* Animations */
 @keyframes fadeIn {
   to {
     opacity: 1;

@@ -1,8 +1,15 @@
-/* ======================= Panel Controls & Chart Grid ======================= */
 .panel-controls {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  padding: 0.5rem 0; 
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.panel-controls:hover {
+  transform: translateY(0); 
+  box-shadow: none; 
 }
 
 .chart-grid {
@@ -15,9 +22,21 @@
   justify-items: stretch;
   max-width: 1300px;
   margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
-/* Grid Layout Overrides */
+.chart-grid > * {
+  background: #ffffff; 
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.chart-grid > *:hover {
+  transform: translateY(0); 
+  box-shadow: none;
+}
+
 .grid-1x1 .chart-grid { display: none !important; }
 
 .grid-1x2 .chart-grid,
@@ -39,7 +58,7 @@
   width: 100%;
 }
 
-/* ============ Responsive =========== */
+/* ===================== Responsive ===================== */
 @media (max-width: 900px) {
   .chart-grid { max-width: 700px; }
 }
@@ -48,5 +67,18 @@
   .panel-controls { flex-direction: column; gap: 0.5rem; }
 }
 @media (max-width: 480px) {
-  .chart-grid { max-width: 100%; grid-template-columns: 1fr !important; }
+  .chart-grid { 
+    max-width: 100%; 
+    grid-template-columns: 1fr !important; 
+  }
+}
+
+/* Optional: Smooth fade-in animation for charts */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.chart-grid > * {
+  animation: fadeInUp 0.6s ease forwards;
 }

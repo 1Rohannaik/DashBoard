@@ -1,26 +1,40 @@
-/* Select component */
 .select {
   appearance: none;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  background: #ffffff; 
+  border: 1px solid #d1d5db; 
+  border-radius: 12px; 
   padding: 10px 42px 10px 14px;
-  color: var(--text);
-  font-size: var(--fs-md);
+  color: #374151; 
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23a1a1aa' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
   background-position: right 14px center;
   background-repeat: no-repeat;
-  background-size: 16px;
+  background-size: 16px; 
+  animation: fadeInUp 0.6s ease forwards; 
 }
 
 .select:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent), transparent 85%);
+  border-color: #4f46e5; 
+  transform: translateY(-2px); 
 }
 
 .select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent), transparent 85%);
+  border-color: #4f46e5; 
+
+  outline: none; 
+  transform: translateY(-2px);
+}
+
+/* Fade-in animation for all inputs/selects */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

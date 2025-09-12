@@ -2,6 +2,8 @@
 @import './styles/base.css';
 
 /* Layout */
+
+@import './styles/layout/AttendanceOverview.css';
 @import './styles/layout/app-layout.css';
 @import './styles/layout/dashboard.css';
 
@@ -14,7 +16,6 @@
 /* Utilities */
 @import './styles/utilities/loading.css';
 @import './styles/utilities/responsive.css';
-
 
 
 

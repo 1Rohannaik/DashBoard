@@ -1,30 +1,27 @@
-/* CSS Variables - Dark theme default */
 :root {
-  /* Colors - Dark blue palette */
-  --bg: #0b1220;
-  --panel: #111a2e;
-  --panel-alt: #15223a;
-  --text: #e6ebf5;
-  --text-muted: #9fb0c9;
-  --surface-border: #233251;
-  --border: #2a3a5e;
-  --accent: #4dabf7;
-  --green: #2ecc8f;
-  --danger: #ef5350;
-  --scrim: rgba(8, 12, 22, 0.55);
+  --bg: #ffffff;
+  --panel: #f9fafb;
+  --panel-alt: #f3f4f6;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --surface-border: #d1d5db;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --green: #2ecc71;
+  --danger: #ef4444;
+  --scrim: rgba(255, 255, 255, 0.75);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12),
+    0 4px 6px -2px rgba(0, 0, 0, 0.08);
+  --shadow-1: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.12);
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-1: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-2: 0 4px 16px rgba(0, 0, 0, 0.4);
-
-  /* Border radius */
   --radius-sm: 8px;
   --radius: 12px;
 
-  /* Fluid typography */
+
   --fs-md: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
   --fs-lg: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
   --fs-xl: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
